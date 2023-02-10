@@ -4,20 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign-up Form</title>
     <link rel="stylesheet" href="./style.css"> 
+    <link href="https://fonts.cdnfonts.com/css/ibm-plex-sans-devanagari" rel="stylesheet">  
 </head>
 <body>
     <main>
-        <div class="side">
+        <div class="side"> <!-- SIDEBAR -->
             <div class="odin">
                 <img class="logo" src="./media/odin.png">
                 <a href="https://theodinproject.com" class="logotext">ODIN</a>
             </div>
             <p class="credits" >Photo by <a class="credit" href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a class="credit" href="https://unsplash.com">Upsplash</a></p>
         </div>
-        <div class="signup">
-            
+
+        <div class="sign-up"> <!-- SIGNUP FORM -->
+            <div class="top">
+                <h2 class="top-text">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</h2>
+                <h2 class="top-text">You <em>know</em> you want to.</h2>
+            </div>
+            <form action="" id="signup" method="post" >  
+                <h2 class="form-title">Let's do this!</h2>
+                <section>
+                    <div class="first-name input-f">
+                        <label for="first-name" data-help="First name is required." >FIRST NAME *</label>
+                        <input id="first-name" placeholder="First Name" name="first-name" type="text" value="" size="30" pattern="^[A-Za-z]+$"  maxlength="100" required>
+                    </div>
+                    <div class="last-name input-f">
+                        <label for="last-name" data-help="Last name is required." >LAST NAME *</label>
+                        <input id="last-name" placeholder="Last Name" name="last-name" type="text" value="" size="30" pattern="^[A-Za-z]+$"  maxlength="100" required>
+                    </div>
+                    <div class="form-email input-f">
+                        <label for="form-email" data-help="Email is required." >EMAIL *</label>
+                        <input id="form-email" placeholder="email@domain.com" name="form-email" type="email" value="" size="30" maxlength="250" required>
+                    </div>
+                    <div class="form-phone input-f">
+                        <label for="form-phone" data-help="Phone number is required." >PHONE NUMBER *</label>
+                        <input id="form-phone" placeholder="123-456-7890" name="form-phone" type="tel" value="" pattern="\d{3}[\-]\d{3}[\-]\d{4}" size="30" maxlength="250" required>
+                    </div>
+                    <div class="form-pass input-f">
+                        <label for="form-pass" data-help="Password is required." >PASSWORD *</label>
+                        <input id="form-pass" placeholder="Password" name="form-pass" type="password" value="" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" size="30" maxlength="250" required>
+                        <ul id="req" class="hidden" >
+                            <li>At least 8 characters</li>
+                            <li>One lowercase character</li>
+                            <li>One uppercase character</li>
+                            <li>One special character</li>
+                        </ul>
+                    </div>
+                    <div class="confirm-pass input-f">
+                        <label for="confirm-pass" data-help="Passwords must match." >CONFIRM PASSWORD *</label>
+                        <input id="confirm-pass" placeholder="Confirm Password" name="confirm-pass" type="password" value="" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" size="30" maxlength="250" required>
+                    </div>
+                </section>
+                <button type="submit">Create Account</button>
+                <p class="login">Already have an account? <a href="./index.html" >Log in</a> </p>
+            </form>
+                
         </div>
     </main>
     <script src="./script.js"></script>

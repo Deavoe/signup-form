@@ -7,6 +7,9 @@ body {
     height: 100vh;
     margin: 0;
     overflow: hidden;
+    font-family: 'IBM Plex Sans Devanagari',sans-serif ;
+    /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ; */
+    background-color: rgb(241,241,241);
 }
 
 main {
@@ -14,8 +17,10 @@ main {
     display:flex;
 }
 
+/* SIDEBAR */
 .side {
     flex: 1;
+    /* max-width: 40%; */
     display:flex;
     flex-direction: column;
     background-image: url(./media/sidebar.jpg);
@@ -47,8 +52,8 @@ main {
 }
 
 .logotext:hover {
-    margin-left: .75vw;
-    scale: 1.12;
+    margin-left: .65vw;
+    scale: 1.08;
     color: rgb(142, 255, 147);
 }
 
@@ -66,13 +71,182 @@ main {
     color: rgb(255,255,255);
 }
 
-.signup {
-
+/* SIGN-UP FORM */
+.sign-up {
     width: auto;
     flex: 2.5;
-    background-color: rgb(235,235,235);
+    background-color: rgb(246,246,246);
     display:flex;
     flex-direction: column;
-    z-index: -1;
+    justify-content: center;
+    /* align-items: center; */
+    /* gap: 2vh; */
 }
 
+.top {
+    background-color: rgb(246,246,246);
+    padding: 2vh 2vw;
+    /* padding-top: 10vh; */
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+h2 {
+  font-size: 1.2rem;
+  width: 70%;
+}
+
+form {
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    background-color: rgb(246,246,246);
+    align-items: start;
+    /* padding: 2vh 0; */
+}
+
+
+.form-title {
+    /* font-size:1rem; */
+    margin: 0;
+    padding-top: 2vh;
+    padding-left: 2vw;
+    width: 100%;
+    background-color: rgb(255,255,255);
+    z-index: 2;
+}
+
+button,
+.login {
+    margin-left: 2vw;
+}
+
+section {
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    background-color: rgb(255,255,255);
+    background-size: 100vh 100vw;
+    align-items: center;
+    padding: 3vh 0;
+    gap: 2vh;
+    margin-bottom: 4vh;
+    box-shadow: 3px 3px 12px rgba(0,0,0,.25) ;
+}
+input:invalid {
+    border: 1px solid #b92326;
+    background-color: rgba(185, 35, 38, 0.25);
+}
+
+input:placeholder-shown,
+input {
+    outline: none;
+    border: 1px solid rgb(200,200,200) ;
+    font-size: 1rem;
+    border-radius: 2px;
+    background-color: rgb(255,255,255);
+    transition: all 0.2s;
+    padding: .5rem;
+}
+
+input:focus {
+    box-shadow: 1px 1px 6px rgba(0,0,0,.5) ;
+}
+
+input:valid {
+    border: 1px solid rgb(110, 190, 110) ;
+    background-color: rgba(182, 241, 182, 0.5);
+}
+
+input:focus:valid {
+    border: 1px solid rgb(99,255,99) ;
+    background-color: rgb(255,255,255);
+}
+
+input:focus:invalid {
+    border: 1px solid #b92326;
+    background-color: rgb(255,255,255);
+}
+
+label {
+    font-size: .75rem;
+    letter-spacing: .1rem;
+    font-weight: 750;
+    color: rgb(66,66,66);
+}
+
+.input-f {
+    flex:.75;
+    display:flex;
+    flex-direction: column;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    gap:.5vh;
+}
+
+button {
+    background-color: #596D48;
+    border: none;
+    color: rgb(255,255,255);
+    font-family: 'IBM Plex Sans Devanagari',sans-serif ;
+    border-radius: 6px;
+    font-size: 1rem;
+    padding: 1rem 4rem;
+    font-weight: 700;
+    box-shadow: 2px 2px 4px rgba(0,0,0,.5) ;
+}
+
+.login {
+    margin-top: 3vh;
+    font-size:1rem;
+    color: rgb(41,41,41);
+    font-weight: 510;
+}
+
+.login :first-child {
+    text-decoration: none;
+    color: #596D48;
+    font-weight: 600;
+}
+
+#req {
+    transition: all .2s;
+    position: fixed ;
+    margin-top: 5rem;
+    border-radius: 4px;
+    background-color: rgb(255,255,255);
+    box-shadow: 0 0 8px rgb(0,0,0,.5) ;
+    z-index: 3;
+    padding: 1rem;
+    width: auto;
+    height: auto;
+    /* opacity: 1; */
+}
+
+li {
+    margin-bottom: .5rem;
+    /* content: '';
+    display: inline-block; */
+	list-style:none;
+    /* background-color: rgb(255,100,100); */
+	background-image: url(./media/red.svg );
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: .75rem ; ;
+    font-size: .88rem;
+    text-indent: 1.5rem;
+    color: rgb(222,25,25);
+    white-space: nowrap;
+    margin-left: 0vw;
+    padding: 0;
+}
+
+.hidden {
+    /* height: auto; */
+    opacity: 0;
+}
