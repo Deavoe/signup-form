@@ -91,6 +91,14 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: end;
+    text-shadow: 1px 0px 0px rgb(255,255,0) ;
+}
+
+.top :first-child {
+    margin: 0;
+    font-family: NorseBold, sans-serif ;
+    font-size: clamp(1rem,5vh,5vh);
+    /* text-shadow: 1px 0px 0px rgb(255,255,0) ; */
 }
 
 h2 {
@@ -98,6 +106,9 @@ h2 {
   width: 70%;
 }
 
+form :first-child {
+    font-weight: 400;
+}
 form {
     width: 100%;
     display:flex;
@@ -199,6 +210,14 @@ button {
     padding: 1rem 4rem;
     font-weight: 700;
     box-shadow: 2px 2px 4px rgba(0,0,0,.5) ;
+    cursor: pointer;
+    transition: all 0.225s;
+}
+
+button:hover {
+    background-color: #87a56d;
+    scale: 1.02;
+    box-shadow: 3px 3px 5px rgba(0,0,0,.5) ;
 }
 
 .login {
@@ -212,6 +231,7 @@ button {
     text-decoration: none;
     color: #596D48;
     font-weight: 600;
+ 
 }
 
 #req {
@@ -226,10 +246,12 @@ button {
     width: auto;
     height: auto;
     /* opacity: 1; */
+    pointer-events: none;
 }
 
 li {
     margin-bottom: .5rem;
+    pointer-events: none;
     /* content: '';
     display: inline-block; */
 	list-style:none;

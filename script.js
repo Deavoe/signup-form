@@ -1,4 +1,5 @@
 const pass = document.getElementById("form-pass");
+const confirm = document.getElementById("confirm-pass");
 const req = document.getElementById("req")
 // .addEventListener("focusout", myScript);
 let g = document.querySelector('#req :nth-child(1)')
@@ -38,4 +39,18 @@ pass.addEventListener("click", (event) => {
 });
 pass.addEventListener("focusout", (event) => {
     req.classList.add("hidden")
+ });
+confirm.oninput = function() {
+    if (this.value !== pass.value) {
+        this.setCustomValidity("Passwords must match.");
+    } else {
+        this.setCustomValidity("");
+    }
+}
+confirm.addEventListener("focusout", (event) => {
+    if (this.value !== pass.value) {
+        this.setCustomValidity("Passwords must match.");
+    } else {
+        this.setCustomValidity("");
+    }
  });
